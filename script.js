@@ -1,6 +1,8 @@
 $(function(){
 
+//hides the empty iframe untill a video is recieved
 $("iframe").hide();
+
 //grab value from form
 $("#search-term").submit(function(event){
 event.preventDefault();
@@ -38,11 +40,12 @@ function getRequest(date){
 //display results
 function showGetResults(result){
 	if(result.media_type === "video") {
-	   $("img-api").css("display", "none");
+	   	$("#img-api").hide();
 	    $("iframe").show();
 	    $("#vid-api").attr("src", result.url);
   	}
 	else {
+		$("#img-api").show();
 	    $("#vid-api").css("display", "none"); 
 	    $("#img-api").attr("src", result.hdurl);
   		}
