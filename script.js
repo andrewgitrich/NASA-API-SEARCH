@@ -73,7 +73,7 @@ function showGetResults(result){
 
   		
 
-  		$("#demo").text(resugitlt.explanation);
+  		$("#demo").text(result.explanation);
 		$("#title").text(result.title);
 	}
 
