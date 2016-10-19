@@ -4,16 +4,16 @@ $(function(){
 $("iframe").hide();
 
 //grab value from form
-$("#search-term").submit(function(event){
-event.preventDefault();
-
+/*$("#search-term").submit(function(event){
+event.preventDefault();*/
+(function go(){
 var inputDate = $("#query").val();
 	getRequest(inputDate);
 	$("#query").val("");
-});
+})();
 
 //random button
-$("button").on("click", function(){
+$("#random").on("click", function(){
 	var year = Math.floor(Math.random() * (2016 - 2001) + 2001);
  	var month = Math.floor(Math.random() * (13 - 1) + 1);
 	var day = Math.floor(Math.random() * (29 - 1) + 1);
@@ -56,6 +56,8 @@ function getRequest(date){
 	
 //display results
 function showGetResults(result){
+
+
 	if(result.media_type === "video") {
 	   	$("#img-api").hide();
 	    $("iframe").show();
@@ -64,10 +66,14 @@ function showGetResults(result){
 	else {
 		$("#img-api").show();
 	    $("#vid-api").css("display", "none"); 
-	    $("#img-api").attr("src", result.hdurl);
+	 	//$("#img-api").attr("src", result.hdurl);
+	 	$("#container").css({"background-image": 'url(' + result.hdurl + ')','background-repeat': 'no-repeat','background-size': '100%' });
+  			console.log(result.hdurl);
   		}
 
-  		$("#description").text(result.explanation);
+  		
+
+  		$("#demo").text(resugitlt.explanation);
 		$("#title").text(result.title);
 	}
 

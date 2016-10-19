@@ -3,12 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Search</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
+		
+<div id="container">
 <header>
-	<button>ima button</button>
+	<button id="random">ima button</button>
 	<form id="search-term">
 		<input id="query" type="date">
 		<input type="submit" name="submit">
@@ -23,12 +25,16 @@
 	</div>
 
 	<div id="info">
-		
+	
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Description</button>
+  <div id="demo" class="collapse">
+  </div>
 		<p id="description"></p>
 	</div>
 
-
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script  src="script.js"></script>
 </body>
 </html>

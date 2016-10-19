@@ -1,3 +1,9 @@
+#container{
+	margin:auto;
+	height: 800px;
+	width: 1200px;
+}
+
 header{
 
 height: 100px;
