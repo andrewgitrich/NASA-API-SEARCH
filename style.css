@@ -1,7 +1,5 @@
 #container{
-	margin:auto;
 	height: 800px;
-	width: 1200px;
 }
 
 header{
@@ -11,6 +9,10 @@ width: 95%;
 margin: auto;
 background-color: blue;
 
+}
+
+#random{
+	text-align: center;
 }
  
 form{
