@@ -9,12 +9,29 @@ event.preventDefault();
 
 var inputDate = $("#query").val();
 	getRequest(inputDate);
-	//console.log(inputDate);
 	$("#query").val("");
 });
 
+//random button
+$("button").on("click", function(){
+	var year = Math.floor(Math.random() * (2016 - 2001) + 2001);
+ 	var month = Math.floor(Math.random() * (13 - 1) + 1);
+	var day = Math.floor(Math.random() * (29 - 1) + 1);
+	var randomDate = year.toString() + "-" + month.toString() + "-" + day.toString();
+/*console.log(year);
+console.log(month);
+console.log(day);
+console.log(randomDate);*/
+	getRequest(randomDate);
+});
+ 
 
-//run get request with value
+
+
+
+
+
+//run get request with value from form
 function getRequest(date){
 		var params ={
 			date: date,
@@ -32,7 +49,7 @@ function getRequest(date){
 
 	.done(function(result){
 		var getResults = showGetResults(result);
-		console.log(result);
+		//console.log(result);
 		
 	});
 }
