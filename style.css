@@ -7,8 +7,12 @@ header{
 height: 100px;
 width: 95%;
 margin: auto;
-background-color: blue;
+font-size: 3em;
 
+}
+
+#demo{
+	font-size: 1em;
 }
 
 #random{
@@ -21,6 +25,7 @@ form{
 
 }
 
-iframe{
-	height: auto;
+/*to correct iframe height*/
+html, body, iframe { 
+	height: 100%; 
 }
