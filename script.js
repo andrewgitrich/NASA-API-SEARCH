@@ -3,9 +3,11 @@ $(function(){
 //hides the empty iframe untill a video is recieved
 $("iframe").hide();
 
-//grab value from form
-/*$("#search-term").submit(function(event){
-event.preventDefault();*/
+//grab value from form date search
+$("#search-term").submit(function(event){
+event.preventDefault();
+	getRequest($("#query").val());
+	});
 
 //gets todays photo of the day immediatly
 (function(){
@@ -28,6 +30,7 @@ $("#random").on("click", function(){
 function getRequest(date){
 		var params ={
 			date: date,
+
 			//hd: "",	
 			api_key: "VHh1uMGyZiUyQqrCSirGZxoOZju4EHBqRWyODt31" 
 		};
@@ -41,7 +44,7 @@ function getRequest(date){
 
 	.done(function(result){
 		var getResults = showGetResults(result);
-		//console.log(result);
+		console.log(result);
 		
 	});
 }
@@ -51,13 +54,14 @@ function showGetResults(result){
 
 //if a vid returns run
 	if(result.media_type === "video") {
-	   	$("#img-api").hide();
-	    $("iframe").show();
+	   	$("#container").hide();
+	   	$("iframe").show();
+	    //$("iframe").css({"background-image": 'url(' + result.url + ')','background-repeat': 'no-repeat','background-size': '100%' });
 	    $("#vid-api").attr("src", result.url);
   		}
  //if an img returns run
 	else {
-		$("#img-api").show();
+		$("#container").show();
 	    $("#vid-api").css("display", "none"); 
 	 	$("#container").css({"background-image": 'url(' + result.hdurl + ')','background-repeat': 'no-repeat','background-size': '100%' });
   			console.log(result.hdurl);

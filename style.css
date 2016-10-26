@@ -21,10 +21,6 @@ form{
 
 }
 
-
-#vid-api{
-	display: block;
-	margin: 5% 5%;
-	width: 65%;
-
+iframe{
+	height: auto;
 }
