@@ -4,36 +4,39 @@
 	<meta charset="UTF-8">
 	<title>Search</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	
 
-	<header>NASA PHOTO OF THE DAY SEARCH</header>
+	<header>NASA PHOTO OF THE DAY SEARCH
+		<h4>Search NASA's P.O.T.D. archive for beautiful images of our galaxy</h4>
+	</header>
+	<hr>
+
 	<div class="col-md-3" id="info">
 		<div id="search-results">
-			<h1 id="title"></h1>
-
-			<button id="random">Random</button>
 			<h3>Date search</h3>
 			<form id="search-term">
 	 -			<input id="query" type="date">
 	 -			<input type="submit" name="submit">
 	 -		</form>
+	 		<button id="random">Random Search</button>
 		</div>
-	  
-		<div id="demo"></div>
+		<div id="demo">
+		</div>
 		<p id="description"></p>
 	</div>
 	
+	<h1 id="title"></h1>
 	<iframe id="vid-api" class="col-sm-9"></iframe>
 	<div id="container" class="col-md-9" >
-		
 	</div>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script  src="script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script  src="script.js"></script>
 </body>
 </html>
