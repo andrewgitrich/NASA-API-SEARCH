@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+						<!-- add name and content for google dev tool @media debug-->
+	<meta charset="UTF-8" name="viewport" content="width=device-width">
 	<title>Search</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
@@ -12,9 +13,14 @@
 
 	<header>NASA PHOTO OF THE DAY SEARCH
 		<h4>Search NASA's P.O.T.D. archive for beautiful images of our galaxy</h4>
+		<hr>
 	</header>
-	<hr>
-
+	
+<h1 id="title"></h1>
+		<iframe id="vid-api" class="col-sm-9"></iframe>
+		
+		<div id="container" class="col-md-9" >
+		</div>
 	<div class="col-md-3" id="info">
 		<div id="search-results">
 			<h3>Date search</h3>
@@ -22,17 +28,15 @@
 	 -			<input id="query" type="date">
 	 -			<input type="submit" name="submit">
 	 -		</form>
-	 		<button id="random">Random Search</button>
+	 		<button id="random">Random Search</button>	
 		</div>
-		<div id="demo">
+
+		<div class="description">
 		</div>
-		<p id="description"></p>
+		
 	</div>
 	
-	<h1 id="title"></h1>
-	<iframe id="vid-api" class="col-sm-9"></iframe>
-	<div id="container" class="col-md-9" >
-	</div>
+		
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

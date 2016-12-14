@@ -61,11 +61,11 @@ function showGetResults(result){
 	else {
 		$("#container").show();
 	    $("#vid-api").css("display", "none"); 
-	 	$("#container").css({"background-image": 'url(' + result.hdurl + ')','background-repeat': 'no-repeat','background-size': '100%' });
+	 	$("#container").css({"background-image": 'url(' + result.hdurl + ')','background-repeat': 'no-repeat','background-size': 'cover' });
   		}
 
 		//add a title and description
-  		$("#demo").text(result.explanation);
+  		$(".description").text(result.explanation);
 		$("#title").text(result.title);
 	}
 });
